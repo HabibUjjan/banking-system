@@ -1,0 +1,26 @@
+# application.yml
+spring:
+  application:
+    name: banking-system
+
+  profiles:
+    active: dev
+
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: UTC
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+# Swagger/OpenAPI
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operationsSorter: method
